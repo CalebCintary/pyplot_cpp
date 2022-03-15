@@ -26,13 +26,13 @@ namespace pyplot_cpp {
 
             ~PythonRunner();
 
-            void Run();
+            void Run(bool async = false);
         };
     }
 
 }
 
-
+void* PythonRunner_Threads_Start(void* value);
 
 
 #endif //PYPLOT_CPP_PYTHONRUNNER_HPP

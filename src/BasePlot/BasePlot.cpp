@@ -1,6 +1,5 @@
 #include "pyplot_cpp/BasePlot.hpp"
-
-#include <utility>
+#include "pyplot_cpp/PythonRunner.hpp"
 
 #include "pyplot_cpp/pyplot.hpp"
 
@@ -49,3 +48,11 @@ void pyplot_cpp::BasePlot::setXlabel(const std::string &_xlabel) {
 void pyplot_cpp::BasePlot::setYlabel(const std::string &_ylabel) {
     ylabel = _ylabel;
 }
+
+void pyplot_cpp::BasePlot::show(bool async) {
+    _show();
+    python::PythonRunner runner(&script);
+    runner.Run(async);
+}
+
+

@@ -13,7 +13,7 @@
 namespace conv = pyplot_cpp::converter;
 namespace plt = pyplot_cpp::plt;
 
-void pyplot_cpp::Plot::show() {
+void pyplot_cpp::Plot::_show() {
     script.addAssignment("x", conv::vectorToPythonArray(x));
     script.addAssignment("y", conv::vectorToPythonArray(y));
 
@@ -29,9 +29,6 @@ void pyplot_cpp::Plot::show() {
     }
 
     script.addLine(plt::show());
-
-    python::PythonRunner runner(&script);
-    runner.Run();
 }
 
 pyplot_cpp::Plot::Plot() : BasePlot() {

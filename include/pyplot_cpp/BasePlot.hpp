@@ -15,6 +15,11 @@ namespace pyplot_cpp {
 
         python::PythonScript script;
 
+        /**
+         * Displays your plot
+         */
+        virtual void _show() = 0;
+
     public:
         BasePlot();
 
@@ -54,10 +59,9 @@ namespace pyplot_cpp {
          */
         virtual void mergePlotData(std::vector<double> _x, std::vector<double> _y);
 
-        /**
-         * Displays your plot
-         */
-        virtual void show() = 0;
+
+
+        void show(bool async = false);
     };
 }
 

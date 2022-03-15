@@ -20,7 +20,7 @@ namespace pyplot_cpp {
          */
         Plot(std::vector<double> _x, std::vector<double> _y);
 
-        void show() override;
+        void _show() override;
     };
 }
 
