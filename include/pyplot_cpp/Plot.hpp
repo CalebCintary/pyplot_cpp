@@ -13,6 +13,11 @@ namespace pyplot_cpp {
 
         Plot();
 
+        /**
+         * Creates simple plots with data
+         * @param _x
+         * @param _y
+         */
         Plot(std::vector<double> _x, std::vector<double> _y);
 
         void show() override;

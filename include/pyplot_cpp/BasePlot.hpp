@@ -54,6 +54,9 @@ namespace pyplot_cpp {
          */
         virtual void mergePlotData(std::vector<double> _x, std::vector<double> _y);
 
+        /**
+         * Displays your plot
+         */
         virtual void show() = 0;
     };
 }
