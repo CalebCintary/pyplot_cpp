@@ -10,6 +10,4 @@ namespace pyplot {
 }
 
 
-
-
 #endif //PYPLOT_CPP_GRAPH_H
