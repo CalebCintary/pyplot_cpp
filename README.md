@@ -15,6 +15,8 @@ Simple library for displaying plots and graphs in c++
 Firstly, with python script generation, you need to have python and matplotlib installed on your machine.
 This library uses your system installed python, not venv.
 
+Secondly, for test building you need Boost unit_test_framework.
+
 ## Building
 
 This library builds with cmake. For testing you also need to install Boost with unit_test_framework.
