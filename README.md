@@ -1,5 +1,7 @@
 # PyPlot_cpp
 
+### This is work in progress. May be unstable or not work
+
 Simple library for displaying plots and graphs in c++
 
 ## Content table
