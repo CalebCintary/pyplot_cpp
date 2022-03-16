@@ -9,7 +9,7 @@
 #include <sstream>
 #include <vector>
 
-#include "converter.hpp"
+#include "pyplot_cpp/converter/converter.hpp"
 
 namespace pyplot_cpp {
     namespace plt {

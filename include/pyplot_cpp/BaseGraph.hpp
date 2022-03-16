@@ -1,7 +1,7 @@
 #ifndef PYPLOT_CPP_BASEGRAPH_HЗЗ
 #define PYPLOT_CPP_BASEGRAPH_HЗЗ
 
-#include "PythonScript.hpp"
+#include "pyplot_cpp/python/PythonScript.hpp"
 
 namespace pyplot_cpp {
 

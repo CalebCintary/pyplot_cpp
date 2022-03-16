@@ -1,8 +1,8 @@
 #include "pyplot_cpp/BasePlot.hpp"
-#include "pyplot_cpp/pyplot.hpp"
+#include "pyplot_cpp/plt/pyplot.hpp"
 
 #ifdef PYPLOT_CPP_DYNAMIC_SCRIPT_RUNNER
-#include "pyplot_cpp/DynamicScriptRunner.hpp"
+#include "pyplot_cpp/python/DynamicScriptRunner.hpp"
 #endif
 
 pyplot_cpp::BasePlot::BasePlot() {

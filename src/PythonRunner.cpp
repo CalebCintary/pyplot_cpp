@@ -1,4 +1,4 @@
-#include "pyplot_cpp/PythonRunner.hpp"
+#include "pyplot_cpp/python/PythonRunner.hpp"
 
 pyplot_cpp::python::PythonRunner::PythonRunner(PythonScript* script) {
     this->script = script;

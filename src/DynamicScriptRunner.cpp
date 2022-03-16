@@ -2,7 +2,7 @@
 // Created by calebcintary on 3/16/22.
 //
 
-#include "pyplot_cpp/DynamicScriptRunner.hpp"
+#include "pyplot_cpp/python/DynamicScriptRunner.hpp"
 
 void pyplot_cpp::python::DynamicScriptRunner::Run(bool async) {
     std::ofstream out;

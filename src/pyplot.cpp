@@ -2,7 +2,7 @@
 // Created by calebcintary on 3/15/22.
 //
 
-#include "pyplot_cpp/pyplot.hpp"
+#include "pyplot_cpp/plt/pyplot.hpp"
 
 std::string pyplot_cpp::plt::import() {
     return "import matplotlib.pyplot as plt\n";

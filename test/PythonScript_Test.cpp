@@ -1,7 +1,9 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "cert-err58-cpp"
 #include <boost/test/unit_test.hpp>
 
-#include "pyplot_cpp/PythonScript.hpp"
-#include "pyplot_cpp/DynamicScriptRunner.hpp"
+#include "pyplot_cpp/python/PythonScript.hpp"
+#include "pyplot_cpp/python/DynamicScriptRunner.hpp"
 
 namespace python = pyplot_cpp::python;
 
@@ -94,3 +96,4 @@ BOOST_AUTO_TEST_SUITE(PythonScript_Test)
     }
 
 BOOST_AUTO_TEST_SUITE_END()
+#pragma clang diagnostic pop

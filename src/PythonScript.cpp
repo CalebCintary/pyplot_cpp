@@ -1,4 +1,4 @@
-#include "pyplot_cpp/PythonScript.hpp"
+#include "pyplot_cpp/python/PythonScript.hpp"
 
 void pyplot_cpp::python::PythonScript::addLine(const std::string& line,
                                                const std::string& end) {

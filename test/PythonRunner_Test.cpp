@@ -1,7 +1,7 @@
 #include <boost/test/unit_test.hpp>
 
-#include "pyplot_cpp/PythonScript.hpp"
-#include "pyplot_cpp/DynamicScriptRunner.hpp"
+#include "pyplot_cpp/python/PythonScript.hpp"
+#include "pyplot_cpp/python/DynamicScriptRunner.hpp"
 
 BOOST_AUTO_TEST_SUITE(PythonRunner_Test)
 

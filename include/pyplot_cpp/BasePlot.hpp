@@ -1,7 +1,7 @@
 #ifndef PYPLOT_CPP_BASEPLOT_HPP
 #define PYPLOT_CPP_BASEPLOT_HPP
 
-#include "PythonScript.hpp"
+#include "pyplot_cpp/python/PythonScript.hpp"
 
 namespace pyplot_cpp {
     class BasePlot {

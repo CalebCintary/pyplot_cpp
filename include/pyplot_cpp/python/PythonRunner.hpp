@@ -9,7 +9,7 @@
 #include <chrono>
 #include <cstdlib>
 
-#include "pyplot_cpp/PythonScript.hpp"
+#include "PythonScript.hpp"
 
 namespace pyplot_cpp {
     namespace python {
