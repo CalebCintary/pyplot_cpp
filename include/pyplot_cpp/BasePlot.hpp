@@ -1,10 +1,11 @@
 #ifndef PYPLOT_CPP_BASEPLOT_HPP
 #define PYPLOT_CPP_BASEPLOT_HPP
 
-#include "pyplot_cpp/python/PythonScript.hpp"
+#include "Showable.hpp"
+#include "python/PythonScript.hpp"
 
 namespace pyplot_cpp {
-    class BasePlot {
+    class BasePlot : public Showable {
     protected:
         std::vector<double> x;
         std::vector<double> y;
@@ -13,12 +14,7 @@ namespace pyplot_cpp {
         std::string ylabel = "";
         std::string title = "";
 
-        python::PythonScript script;
 
-        /**
-         * Displays your plot
-         */
-        virtual void _show() = 0;
 
     public:
         BasePlot();
@@ -58,10 +54,6 @@ namespace pyplot_cpp {
          * @param _y
          */
         virtual void mergePlotData(std::vector<double> _x, std::vector<double> _y);
-
-
-
-        void show(bool async = false);
     };
 }
 

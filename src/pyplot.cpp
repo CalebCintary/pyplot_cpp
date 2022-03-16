@@ -24,13 +24,13 @@ std::string pyplot_cpp::plt::title(const std::string &title) {
     return "plt.title(\"" + title + "\")";
 }
 
-std::string pyplot_cpp::plt::show() {
-    return "plt.show()";
-}
-
 std::string pyplot_cpp::plt::plot(const std::vector<double> &x, const std::vector<double> &y) {
     return plot(
             pyplot_cpp::converter::vectorToPythonArray(x),
             pyplot_cpp::converter::vectorToPythonArray(y)
             );
+}
+
+std::string tight_layout() {
+    return "plt.tight_layout()";
 }

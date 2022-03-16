@@ -1,11 +1,12 @@
 #ifndef PYPLOT_CPP_BASEGRAPH_HЗЗ
 #define PYPLOT_CPP_BASEGRAPH_HЗЗ
 
-#include "pyplot_cpp/python/PythonScript.hpp"
+#include "Showable.hpp"
+#include "python/PythonScript.hpp"
 
 namespace pyplot_cpp {
 
-    class BaseGraph {
+    class BaseGraph : public Showable {
     private:
 
     public:

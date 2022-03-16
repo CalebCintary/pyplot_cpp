@@ -1,10 +1,6 @@
 #include "pyplot_cpp/BasePlot.hpp"
 #include "pyplot_cpp/plt/pyplot.hpp"
 
-#ifdef PYPLOT_CPP_DYNAMIC_SCRIPT_RUNNER
-#include "pyplot_cpp/python/DynamicScriptRunner.hpp"
-#endif
-
 pyplot_cpp::BasePlot::BasePlot() {
     script.addLine(plt::import());
 }
@@ -51,12 +47,5 @@ void pyplot_cpp::BasePlot::setYlabel(const std::string &_ylabel) {
     ylabel = _ylabel;
 }
 
-void pyplot_cpp::BasePlot::show(bool async) {
-    _show();
-#ifdef PYPLOT_CPP_DYNAMIC_SCRIPT_RUNNER
-    python::DynamicScriptRunner runner(&script);
-    runner.Run(async);
-#endif
-}
 
 

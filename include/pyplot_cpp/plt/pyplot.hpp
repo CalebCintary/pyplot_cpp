@@ -1,6 +1,8 @@
 //
 // Created by calebcintary on 3/15/22.
 //
+// TODO: Might be connection point between Dynamic Script and Embedded Interpreter
+//
 
 #ifndef PYPLOT_CPP_PYPLOT_HPP
 #define PYPLOT_CPP_PYPLOT_HPP
@@ -25,7 +27,9 @@ namespace pyplot_cpp {
 
         std::string title(const std::string& title);
 
-        std::string show();
+        std::string tight_layout();
+
+
     }
 }
 
