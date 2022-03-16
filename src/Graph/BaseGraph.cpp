@@ -1,2 +1,2 @@
 
-#include "pyplot_cpp/BaseGraph.h"
+#include "pyplot_cpp/BaseGraph.hpp"

@@ -1,7 +1,7 @@
 #include <boost/test/unit_test.hpp>
 
 #include "pyplot_cpp/PythonScript.hpp"
-#include "pyplot_cpp/PythonRunner.hpp"
+#include "pyplot_cpp/DynamicScriptRunner.hpp"
 
 namespace python = pyplot_cpp::python;
 
@@ -31,7 +31,7 @@ BOOST_AUTO_TEST_SUITE(PythonScript_Test)
                                         "a = numpy.array([1, 1])\n"
                                         "print(a)\n");
 
-        python::PythonRunner runner(&script);
+        python::DynamicScriptRunner runner(&script);
         runner.Run();
     }
 
@@ -45,7 +45,7 @@ BOOST_AUTO_TEST_SUITE(PythonScript_Test)
                                         "a = np.array([1, 1])\n"
                                         "print(a)\n");
 
-        python::PythonRunner runner(&script);
+        python::DynamicScriptRunner runner(&script);
         runner.Run();
     }
 
@@ -59,7 +59,7 @@ BOOST_AUTO_TEST_SUITE(PythonScript_Test)
                                         "a = np.array([1, 1])\n"
                                         "print(a)\n");
 
-        python::PythonRunner runner(&script);
+        python::DynamicScriptRunner runner(&script);
         runner.Run();
     }
 
@@ -74,7 +74,7 @@ BOOST_AUTO_TEST_SUITE(PythonScript_Test)
                                         "a = array([1, 1])\n"
                                         "print(a)\n");
 
-        python::PythonRunner runner(&script);
+        python::DynamicScriptRunner runner(&script);
         runner.Run();
     }
 
@@ -89,7 +89,7 @@ BOOST_AUTO_TEST_SUITE(PythonScript_Test)
                                         "a = array([1, 1])\n"
                                         "print(a)\n");
 
-        python::PythonRunner runner(&script);
+        python::DynamicScriptRunner runner(&script);
         runner.Run();
     }
 

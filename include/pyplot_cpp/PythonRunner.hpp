@@ -15,9 +15,9 @@ namespace pyplot_cpp {
     namespace python {
 
         class PythonRunner {
-        private:
-            PythonScript* script;
 
+        protected:
+            PythonScript* script;
         public:
             /**
              * Initialize base PythonRunner to create and run PythonFile
@@ -26,7 +26,7 @@ namespace pyplot_cpp {
 
             ~PythonRunner();
 
-            void Run(bool async = false);
+            virtual void Run(bool async = false) = 0;
         };
     }
 

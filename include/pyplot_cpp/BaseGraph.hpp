@@ -1,5 +1,5 @@
-#ifndef PYPLOT_CPP_BASEGRAPH_H
-#define PYPLOT_CPP_BASEGRAPH_H
+#ifndef PYPLOT_CPP_BASEGRAPH_HЗЗ
+#define PYPLOT_CPP_BASEGRAPH_HЗЗ
 
 #include "PythonScript.hpp"
 
@@ -15,4 +15,4 @@ namespace pyplot_cpp {
 }
 
 
-#endif //PYPLOT_CPP_BASEGRAPH_H
+#endif //PYPLOT_CPP_BASEGRAPH_HЗЗ
