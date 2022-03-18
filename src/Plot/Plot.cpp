@@ -35,5 +35,5 @@ pyplot_cpp::Plot::Plot() : BasePlot() {
 }
 
 pyplot_cpp::Plot::Plot(std::vector<double> _x, std::vector<double> _y) : BasePlot() {
-    this->setPlotData(std::move(_x), std::move(_y));
+    this->setData(std::move(_x), std::move(_y));
 }

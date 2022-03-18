@@ -11,15 +11,24 @@
 #include <sstream>
 #include <vector>
 
+#include "Argument.h"
 #include "pyplot_cpp/converter/converter.hpp"
+
 
 namespace pyplot_cpp {
     namespace plt {
+
+        // ----- < Show able objects > -----
+
+        std::string plot(const std::string& x, const std::string& y, const std::vector<Argument>& args = {});
+
+        std::string plot(const std::vector<double>& x, const std::vector<double>& y, const std::vector<Argument>& args = {});
+
+        std::string bar(const std::string& x, const std::string& y, const std::vector<Argument>& args = {});
+
+        // ----- < Different functions > -----
+
         std::string import();
-
-        std::string plot(const std::string& x, const std::string& y);
-
-        std::string plot(const std::vector<double>& x, const std::vector<double>& y);
 
         std::string xlabel(const std::string& xlabel);
 

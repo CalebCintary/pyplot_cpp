@@ -15,7 +15,7 @@ void pyplot_cpp::Showable::tight_layout(bool _v) {
 void pyplot_cpp::Showable::show(bool async) {
 #ifdef PYPLOT_CPP_DYNAMIC_SCRIPT_RUNNER
     dynamicScript_show_stringConstruct();
-
+    // TODO: Add plt::tight_layout
     //Script show must be here. Not anywhere else.
     script.addLine("plt.show()");
     python::DynamicScriptRunner runner(&script);

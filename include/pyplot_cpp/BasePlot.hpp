@@ -14,8 +14,6 @@ namespace pyplot_cpp {
         std::string ylabel = "";
         std::string title = "";
 
-
-
     public:
         BasePlot();
 
@@ -36,7 +34,7 @@ namespace pyplot_cpp {
          * @param _x
          * @param _y
          */
-        virtual void setPlotData(std::vector<double> _x, std::vector<double> _y);
+        virtual void setData(std::vector<double> _x, std::vector<double> _y);
 
         /**
          * Sets title to your plot
@@ -53,7 +51,7 @@ namespace pyplot_cpp {
          * @param _x
          * @param _y
          */
-        virtual void mergePlotData(std::vector<double> _x, std::vector<double> _y);
+        virtual void appendData(std::vector<double> _x, std::vector<double> _y);
     };
 }
 

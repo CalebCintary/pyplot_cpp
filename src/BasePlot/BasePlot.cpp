@@ -15,7 +15,7 @@ void pyplot_cpp::BasePlot::addPoint(double _x, double _y) {
     y.push_back(_y);
 }
 
-void pyplot_cpp::BasePlot::setPlotData(std::vector<double> _x, std::vector<double> _y) {
+void pyplot_cpp::BasePlot::setData(std::vector<double> _x, std::vector<double> _y) {
     if (_x.size() != _y.size()) {
         throw std::runtime_error("Vectors have non-equal size!");
     }
@@ -23,7 +23,7 @@ void pyplot_cpp::BasePlot::setPlotData(std::vector<double> _x, std::vector<doubl
     y = std::move(_y);
 }
 
-void pyplot_cpp::BasePlot::mergePlotData(std::vector<double> _x, std::vector<double> _y) {
+void pyplot_cpp::BasePlot::appendData(std::vector<double> _x, std::vector<double> _y) {
     if (_x.size() != _y.size()) {
         throw std::runtime_error("Vectors have non-equal size!");
     }
