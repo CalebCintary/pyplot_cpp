@@ -1,5 +1,10 @@
 # IDEA files
 .idea
 
+# VS files
+out
+
 # CMake cache
 cmake-build-debug
+cmake-build-debug-visual-studio-x64
+/cmake-build-debug-visual-studio-x64/

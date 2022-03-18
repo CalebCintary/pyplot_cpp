@@ -13,7 +13,6 @@ BOOST_AUTO_TEST_SUITE(Plot_Test)
         plot.addPoint(1, 1);
         plot.addPoint(2, 4);
         plot.addPoint(3, 2);
-        plot.tight_layout();
         plot.show();
     }
 

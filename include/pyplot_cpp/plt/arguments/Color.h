@@ -5,16 +5,14 @@
 #ifndef PYPLOT_CPP_COLOR_H
 #define PYPLOT_CPP_COLOR_H
 
-#include "../Argument.h"
+#include "../Property.h"
 
 
 namespace pyplot_cpp {
     namespace plt {
-        class Color : public Argument {
+        class Color : public Property {
         public:
-            Color(const std::string &name, const std::string &value);
-
-            std::string getStringPresentation() override;
+            Color(const std::string &value);
         };
     }
 }

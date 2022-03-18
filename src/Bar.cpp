@@ -6,6 +6,10 @@
 
 #include <utility>
 
+#include "pyplot_cpp/plt/pyplot.hpp"
+
+namespace plt = pyplot_cpp::plt;
+
 void pyplot_cpp::Bar::dynamicScript_show_stringConstruct() {
     if (!_map.empty()) {
         std::stringstream _data;
@@ -22,8 +26,7 @@ void pyplot_cpp::Bar::dynamicScript_show_stringConstruct() {
         script.addAssignment("x", "data.keys()");
         script.addAssignment("y", "data.values()");
 
-
-
+        script.addLine(plt::bar("x", "y", args));
     }
 
 }
@@ -62,7 +65,7 @@ void pyplot_cpp::Bar::appendData(const std::string& _x, const double &_y) {
     _map[_x] = _y;
 }
 
-void pyplot_cpp::Bar::addArgument(const pyplot_cpp::plt::Argument& argument) {
+void pyplot_cpp::Bar::addArgument(const pyplot_cpp::plt::Property& argument) {
     args.push_back(argument);
 }
 

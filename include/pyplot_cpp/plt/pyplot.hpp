@@ -11,7 +11,7 @@
 #include <sstream>
 #include <vector>
 
-#include "Argument.h"
+#include "Property.h"
 #include "pyplot_cpp/converter/converter.hpp"
 
 
@@ -20,11 +20,11 @@ namespace pyplot_cpp {
 
         // ----- < Show able objects > -----
 
-        std::string plot(const std::string& x, const std::string& y, const std::vector<Argument>& args = {});
+        std::string plot(const std::string& x, const std::string& y, const std::vector<Property>& args = {});
 
-        std::string plot(const std::vector<double>& x, const std::vector<double>& y, const std::vector<Argument>& args = {});
+        std::string plot(const std::vector<double>& x, const std::vector<double>& y, const std::vector<Property>& args = {});
 
-        std::string bar(const std::string& x, const std::string& y, const std::vector<Argument>& args = {});
+        std::string bar(const std::string& x, const std::string& y, const std::vector<Property>& args = {});
 
         // ----- < Different functions > -----
 

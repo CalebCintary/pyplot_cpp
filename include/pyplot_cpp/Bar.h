@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "BasePlot.hpp"
-#include "plt/Argument.h"
+#include "plt/Property.h"
 
 namespace pyplot_cpp {
     class Bar : public BasePlot {
@@ -27,7 +27,7 @@ namespace pyplot_cpp {
 
         std::map<std::string, double> _map;
 
-        std::vector<plt::Argument> args;
+        std::vector<plt::Property> args;
 
     public:
 
@@ -41,7 +41,7 @@ namespace pyplot_cpp {
 
         void appendData(const std::string& _x, const double &_y);
 
-        void addArgument(const plt::Argument& argument);
+        void addArgument(const plt::Property& argument);
     };
 }
 
