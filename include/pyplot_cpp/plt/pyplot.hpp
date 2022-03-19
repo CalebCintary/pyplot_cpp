@@ -1,7 +1,7 @@
 //
 // Created by calebcintary on 3/15/22.
 //
-// TODO: Might be connection point between Dynamic Script and Embedded Interpreter
+// NOTE: Might be connection point between Dynamic Script and Embedded Interpreter
 //
 
 #ifndef PYPLOT_CPP_PYPLOT_HPP
@@ -10,6 +10,7 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <map>
 
 #include "Property.h"
 #include "pyplot_cpp/converter/converter.hpp"
@@ -20,11 +21,11 @@ namespace pyplot_cpp {
 
         // ----- < Show able objects > -----
 
-        std::string plot(const std::string& x, const std::string& y, const std::vector<Property>& args = {});
+        std::string plot(const std::string& x, const std::string& y, const std::map<std::string, Property>& args = {});
 
-        std::string plot(const std::vector<double>& x, const std::vector<double>& y, const std::vector<Property>& args = {});
+        std::string plot(const std::vector<double>& x, std::vector<double>& y, const std::map<std::string, Property>& args = {});
 
-        std::string bar(const std::string& x, const std::string& y, const std::vector<Property>& args = {});
+        std::string bar(const std::string& x, const std::string& y, const std::map<std::string, Property>& args = {});
 
         // ----- < Different functions > -----
 
@@ -37,6 +38,13 @@ namespace pyplot_cpp {
         std::string title(const std::string& title);
 
         std::string tight_layout();
+
+        std::string show();
+
+        std::string savefig(const std::string& path);
+
+        std::string legend(std::string legend_array);
+
 
 
     }

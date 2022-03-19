@@ -1,20 +1,26 @@
 #ifndef PYPLOT_CPP_BASEPLOT_HPP
 #define PYPLOT_CPP_BASEPLOT_HPP
 
+#include <map>
+
 #include "Showable.hpp"
 #include "python/PythonScript.hpp"
+#include "plt/Properties.h"
 
 namespace pyplot_cpp {
-    class BasePlot : public Showable {
-    protected:
-        std::vector<double> x;
-        std::vector<double> y;
+class BasePlot : public Showable {
+protected:
 
-        std::string xlabel = "";
-        std::string ylabel = "";
-        std::string title = "";
+    std::vector<double> x;
+    std::vector<double> y;
 
-    public:
+    std::string xlabel = "";
+    std::string ylabel = "";
+    std::string title = "";
+
+    std::map<std::string, plt::Property> args;
+
+public:
         BasePlot();
 
         /**
@@ -46,13 +52,23 @@ namespace pyplot_cpp {
 
         void setYlabel(const std::string &ylabel);
 
+        void addArgument(const plt::Property& argument);
+
+        void setColor(plt::Color color);
+
         /**
          * Copies data from your vectors to plot by merging with existing data.
          * @param _x
          * @param _y
          */
         virtual void appendData(std::vector<double> _x, std::vector<double> _y);
-    };
+
+        const std::vector<double> &getX() const;
+
+        const std::vector<double> &getY() const;
+
+    const std::map<std::string, plt::Property> &getArgs() const;
+};
 }
 
 

@@ -3,6 +3,7 @@
 //
 
 #include "pyplot_cpp/Showable.hpp"
+#include "pyplot_cpp/plt/pyplot.hpp"
 
 #ifdef PYPLOT_CPP_DYNAMIC_SCRIPT_RUNNER
 #include "pyplot_cpp/python/DynamicScriptRunner.hpp"
@@ -15,10 +16,27 @@ void pyplot_cpp::Showable::tight_layout(bool _v) {
 void pyplot_cpp::Showable::show(bool async) {
 #ifdef PYPLOT_CPP_DYNAMIC_SCRIPT_RUNNER
     dynamicScript_show_stringConstruct();
-    // TODO: Add plt::tight_layout
-    //Script show must be here. Not anywhere else.
-    script.addLine("plt.show()");
+
+    if (_tight_layout) {
+        script.addLine(plt::tight_layout());
+    }
+
+    script.addLine(plt::show());
     python::DynamicScriptRunner runner(&script);
     runner.Run(async);
+#endif
+}
+
+void pyplot_cpp::Showable::save(const std::string &path) {
+#ifdef PYPLOT_CPP_DYNAMIC_SCRIPT_RUNNER
+    dynamicScript_show_stringConstruct();
+
+    if (_tight_layout) {
+        script.addLine(plt::tight_layout());
+    }
+
+    script.addLine(plt::savefig(path));
+    python::DynamicScriptRunner runner(&script);
+    runner.Run();
 #endif
 }

@@ -35,7 +35,7 @@ void pyplot_cpp::plt::Property::setType(pyplot_cpp::plt::ArgumentType type) {
 
 pyplot_cpp::plt::Property::Property(std::string name, std::string value) : name(std::move(name)), value(std::move(value)) {}
 
-std::string pyplot_cpp::plt::Property::getStringPresentation() {
+std::string pyplot_cpp::plt::Property::getStringPresentation() const {
     std::string arg = name + " = ";
     switch (type) {
         case ArgumentType::INT: {
@@ -49,11 +49,10 @@ std::string pyplot_cpp::plt::Property::getStringPresentation() {
     return arg;
 }
 
-std::string pyplot_cpp::plt::parseArguments(std::vector<Property> args) {
+std::string pyplot_cpp::plt::parseArguments(std::map<std::string, pyplot_cpp::plt::Property> args) {
     std::string ss;
-    for (int i = 0; i < args.size() - 1; ++i) {
-        ss += args[i].getStringPresentation() + ",";
+    for (const auto &item : args) {
+        ss += item.second.getStringPresentation() + ",";
     }
-    ss += args[args.size() - 1].getStringPresentation() + ",";
     return ss;
 }

@@ -27,8 +27,6 @@ namespace pyplot_cpp {
 
         std::map<std::string, double> _map;
 
-        std::vector<plt::Property> args;
-
     public:
 
         Bar() = default;
@@ -41,7 +39,7 @@ namespace pyplot_cpp {
 
         void appendData(const std::string& _x, const double &_y);
 
-        void addArgument(const plt::Property& argument);
+
     };
 }
 

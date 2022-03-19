@@ -7,6 +7,7 @@
 
 #include <string>
 #include <vector>
+#include <map>
 
 namespace pyplot_cpp {
     namespace plt {
@@ -32,6 +33,8 @@ namespace pyplot_cpp {
 
         public:
 
+            Property() = default;
+
             Property(std::string name, std::string value, ArgumentType type);
 
             Property(std::string name, std::string value);
@@ -42,11 +45,11 @@ namespace pyplot_cpp {
 
             ArgumentType getType() const;
 
-            virtual std::string getStringPresentation();
+            virtual std::string getStringPresentation() const;
 
         };
 
-        std::string parseArguments(std::vector<Property> args);
+        std::string parseArguments(std::map<std::string, Property> args);
     }
 }
 

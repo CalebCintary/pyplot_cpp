@@ -20,6 +20,8 @@ namespace pyplot_cpp {
          */
         Plot(std::vector<double> _x, std::vector<double> _y);
 
+        Plot(Plot const & plot);
+
         void dynamicScript_show_stringConstruct() override;
     };
 }

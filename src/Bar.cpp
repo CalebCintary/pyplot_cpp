@@ -65,7 +65,3 @@ void pyplot_cpp::Bar::appendData(const std::string& _x, const double &_y) {
     _map[_x] = _y;
 }
 
-void pyplot_cpp::Bar::addArgument(const pyplot_cpp::plt::Property& argument) {
-    args.push_back(argument);
-}
-

@@ -17,7 +17,7 @@ void pyplot_cpp::Plot::dynamicScript_show_stringConstruct() {
     script.addAssignment("x", conv::vectorToPythonArray(x));
     script.addAssignment("y", conv::vectorToPythonArray(y));
 
-    script.addLine(plt::plot("x", "y"));
+    script.addLine(plt::plot("x", "y", args));
 
     if (!xlabel.empty()) {
         script.addLine(plt::xlabel(xlabel));
@@ -36,4 +36,14 @@ pyplot_cpp::Plot::Plot() : BasePlot() {
 
 pyplot_cpp::Plot::Plot(std::vector<double> _x, std::vector<double> _y) : BasePlot() {
     this->setData(std::move(_x), std::move(_y));
+}
+
+pyplot_cpp::Plot::Plot(pyplot_cpp::Plot const &plot) {
+    this->xlabel = plot.xlabel;
+    this->ylabel = plot.ylabel;
+    this->title = plot.title;
+
+    this->x = plot.x;
+    this->y = plot.y;
+    this->args = plot.args;
 }

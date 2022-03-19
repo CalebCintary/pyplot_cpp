@@ -1,4 +1,6 @@
 #include "pyplot_cpp/BasePlot.hpp"
+
+#include <utility>
 #include "pyplot_cpp/plt/pyplot.hpp"
 
 pyplot_cpp::BasePlot::BasePlot() {
@@ -45,6 +47,26 @@ void pyplot_cpp::BasePlot::setXlabel(const std::string &_xlabel) {
 
 void pyplot_cpp::BasePlot::setYlabel(const std::string &_ylabel) {
     ylabel = _ylabel;
+}
+
+void pyplot_cpp::BasePlot::setColor(pyplot_cpp::plt::Color color) {
+    addArgument(color);
+}
+
+void pyplot_cpp::BasePlot::addArgument(const pyplot_cpp::plt::Property &argument) {
+    args[argument.getName()] = argument;
+}
+
+const std::vector<double> &pyplot_cpp::BasePlot::getX() const {
+    return x;
+}
+
+const std::vector<double> &pyplot_cpp::BasePlot::getY() const {
+    return y;
+}
+
+const std::map<std::string, pyplot_cpp::plt::Property> &pyplot_cpp::BasePlot::getArgs() const {
+    return args;
 }
 
 

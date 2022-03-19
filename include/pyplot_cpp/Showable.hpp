@@ -31,7 +31,10 @@ namespace pyplot_cpp {
          */
         virtual void show(bool async = false);
 
+        virtual void save(const std::string& path);
+
         void tight_layout(bool _v = true);
+
     };
 }
 

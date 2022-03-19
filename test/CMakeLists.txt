@@ -1,6 +1,6 @@
 add_executable(python_impl_test
         BoostTest_ContextLoad_Test.cpp
-        PythonScript_Test.cpp PythonRunner_Test.cpp Plot_Test.cpp Bar_Test.cpp)
+        PythonScript_Test.cpp PythonRunner_Test.cpp Plot_Test.cpp Bar_Test.cpp MultiplePlot_Test.cpp)
 
 
 find_package(Boost REQUIRED COMPONENTS filesystem system unit_test_framework )

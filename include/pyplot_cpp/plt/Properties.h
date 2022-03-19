@@ -7,7 +7,7 @@
 
 #include "Property.h"
 
-#include "arguments/Color.h"
+#include "properties/Color.h"
 
 
 #endif //PYPLOT_CPP_PROPERTIES_H
