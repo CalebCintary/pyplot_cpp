@@ -12,20 +12,25 @@
 #include <vector>
 #include <map>
 
-#include "Property.h"
+#include "Property.hpp"
 #include "pyplot_cpp/converter/converter.hpp"
 
+#define PYPLOT_PropertyArray const std::map<std::string, Property>&
 
 namespace pyplot_cpp {
     namespace plt {
 
         // ----- < Show able objects > -----
 
-        std::string plot(const std::string& x, const std::string& y, const std::map<std::string, Property>& args = {});
+        std::string plot(const std::string& x, const std::string& y, PYPLOT_PropertyArray args = {});
 
-        std::string plot(const std::vector<double>& x, std::vector<double>& y, const std::map<std::string, Property>& args = {});
+        std::string plot(const std::vector<double>& x, std::vector<double>& y, PYPLOT_PropertyArray args = {});
 
-        std::string bar(const std::string& x, const std::string& y, const std::map<std::string, Property>& args = {});
+        std::string bar(const std::string& x, const std::string& y, PYPLOT_PropertyArray args = {});
+
+        std::string hist(const std::string& x, PYPLOT_PropertyArray args = {});
+
+        std::string scatter(const std::string& x, const std::string& y, PYPLOT_PropertyArray args = {});
 
         // ----- < Different functions > -----
 
@@ -44,8 +49,6 @@ namespace pyplot_cpp {
         std::string savefig(const std::string& path);
 
         std::string legend(std::string legend_array);
-
-
 
     }
 }

@@ -28,6 +28,7 @@ int main() {
     multPlot.show();    
 }
 ```
+<!--suppress HtmlRequiredAltAttribute, HtmlRequiredAltAttribute -->
 <img src="MultPlot.png">
 
 If you want to add a legend to your graph, you need to write the following

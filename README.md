@@ -44,6 +44,7 @@ int main() {
 ```
 This will show you the simplest graph.
 
+<!--suppress HtmlRequiredAltAttribute, HtmlRequiredAltAttribute, CheckImageSize -->eckImageSize -->
 <img src="./examples/Plot_SimpleShow.png" width="500">
 
 If you want to learn [Advanced usage of Plots](examples/AdvancedPlot.md) click here.

@@ -20,6 +20,8 @@ namespace pyplot_cpp {
 
             return res;
         }
+
+        std::string vectorToPythonArray(std::vector<std::string> _v);
     }
 }
 

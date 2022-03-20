@@ -2,8 +2,8 @@
 // Created by calebcintary on 3/17/22.
 //
 
-#ifndef PYPLOT_CPP_PROPERTY_H
-#define PYPLOT_CPP_PROPERTY_H
+#ifndef PYPLOT_CPP_PROPERTY_HPP
+#define PYPLOT_CPP_PROPERTY_HPP
 
 #include <string>
 #include <vector>
@@ -25,7 +25,7 @@ namespace pyplot_cpp {
             ArgumentType type;
 
         protected:
-            void setName(const std::string &name);
+            void setName(const std::string &_name);
 
             void setValue(const std::string &value);
 
@@ -56,4 +56,4 @@ namespace pyplot_cpp {
 
 
 
-#endif //PYPLOT_CPP_PROPERTY_H
+#endif //PYPLOT_CPP_PROPERTY_HPP

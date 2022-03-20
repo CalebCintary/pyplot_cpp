@@ -19,13 +19,13 @@ add_library(pyplot_cpp STATIC
         Showable.cpp
         ../include/pyplot_cpp/Showable.hpp
         Bar.cpp
-        ../include/pyplot_cpp/Bar.h
+        ../include/pyplot_cpp/Bar.hpp
         plt/Property.cpp
-        ../include/pyplot_cpp/plt/Property.h
-        ../include/pyplot_cpp/plt/Properties.h
+        ../include/pyplot_cpp/plt/Property.hpp
+        ../include/pyplot_cpp/plt/Properties.hpp
         plt/Color.cpp
         ../include/pyplot_cpp/plt/properties/Color.h
         MultiplePlot.cpp
-        ../include/pyplot_cpp/MultiplePlot.hpp)
+        ../include/pyplot_cpp/MultiplePlot.hpp Histogram.cpp ../include/pyplot_cpp/Histogram.hpp MultipleHistogram.cpp ../include/pyplot_cpp/MultipleHistogram.hpp converter.cpp Scatter.cpp ../include/pyplot_cpp/Scatter.hpp)
 
 target_include_directories(pyplot_cpp PRIVATE ../include)

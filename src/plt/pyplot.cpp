@@ -56,3 +56,12 @@ std::string pyplot_cpp::plt::savefig(const std::string& path) {
 std::string pyplot_cpp::plt::legend(std::string legend_array) {
     return "plt.legend(" + legend_array + ")";
 }
+
+std::string pyplot_cpp::plt::hist(const std::string &x, const std::map<std::string, Property> &args) {
+    return "plt.hist(" + x + (!args.empty() ? ", " + parseArguments(args) : "") + ")";
+}
+
+std::string  pyplot_cpp::plt::scatter(const std::string &x, const std::string &y,
+                                      const std::map<std::string, Property> &args) {
+    return "plt.scatter(" + x + ", " + y + (!args.empty() ? ", " + parseArguments(args) : "") + ")";
+}

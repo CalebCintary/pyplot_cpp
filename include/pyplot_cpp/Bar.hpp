@@ -2,14 +2,14 @@
 // Created by calebcintary on 3/17/22.
 //
 
-#ifndef PYPLOT_CPP_BAR_H
-#define PYPLOT_CPP_BAR_H
+#ifndef PYPLOT_CPP_BAR_HPP
+#define PYPLOT_CPP_BAR_HPP
 
 #include <map>
 #include <vector>
 
 #include "BasePlot.hpp"
-#include "plt/Property.h"
+#include "plt/Property.hpp"
 
 namespace pyplot_cpp {
     class Bar : public BasePlot {
@@ -31,7 +31,7 @@ namespace pyplot_cpp {
 
         Bar() = default;
 
-        Bar(std::map<std::string, double> map);
+        explicit Bar(std::map<std::string, double> map);
 
         void setData(std::map<std::string, double> map);
 
@@ -46,4 +46,4 @@ namespace pyplot_cpp {
 
 
 
-#endif //PYPLOT_CPP_BAR_H
+#endif //PYPLOT_CPP_BAR_HPP

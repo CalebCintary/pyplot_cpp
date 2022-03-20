@@ -5,7 +5,7 @@
 
 #include "Showable.hpp"
 #include "python/PythonScript.hpp"
-#include "plt/Properties.h"
+#include "plt/Properties.hpp"
 
 namespace pyplot_cpp {
 class BasePlot : public Showable {

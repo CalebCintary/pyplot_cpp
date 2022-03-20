@@ -2,7 +2,7 @@
 // Created by calebcintary on 3/17/22.
 //
 
-#include "pyplot_cpp/plt/Property.h"
+#include "pyplot_cpp/plt/Property.hpp"
 
 #include <utility>
 
@@ -21,8 +21,8 @@ pyplot_cpp::plt::ArgumentType pyplot_cpp::plt::Property::getType() const {
 pyplot_cpp::plt::Property::Property(std::string name, std::string value,
                                     pyplot_cpp::plt::ArgumentType type) : name(std::move(name)), value(std::move(value)), type(type) {}
 
-void pyplot_cpp::plt::Property::setName(const std::string &name) {
-    Property::name = name;
+void pyplot_cpp::plt::Property::setName(const std::string &_name) {
+    Property::name = _name;
 }
 
 void pyplot_cpp::plt::Property::setValue(const std::string &value) {

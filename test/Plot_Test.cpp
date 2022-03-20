@@ -5,7 +5,7 @@
 #include <boost/test/unit_test.hpp>
 
 #include "pyplot_cpp/Plot.hpp"
-#include "pyplot_cpp/plt/Properties.h"
+#include "pyplot_cpp/plt/Properties.hpp"
 
 BOOST_AUTO_TEST_SUITE(Plot_Test)
 

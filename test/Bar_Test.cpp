@@ -4,12 +4,12 @@
 
 #include <boost/test/unit_test.hpp>
 
-#include "pyplot_cpp/Bar.h"
-#include "pyplot_cpp/plt/Properties.h"
+#include "pyplot_cpp/Bar.hpp"
+#include "pyplot_cpp/plt/Properties.hpp"
 
 BOOST_AUTO_TEST_SUITE(Bar_Test)
 
-    BOOST_AUTO_TEST_CASE(Bar_SimpleShow_Test) {
+    BOOST_AUTO_TEST_CASE(Bar_SimpleSave_Test) {
         pyplot_cpp::Bar bar;
         bar.appendData("C", 20);
         bar.appendData("C++", 15);

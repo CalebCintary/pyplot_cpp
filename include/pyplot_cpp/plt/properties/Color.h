@@ -5,7 +5,7 @@
 #ifndef PYPLOT_CPP_COLOR_H
 #define PYPLOT_CPP_COLOR_H
 
-#include "../Property.h"
+#include "../Property.hpp"
 
 #define COLOR pyplot_cpp::plt::Color
 
