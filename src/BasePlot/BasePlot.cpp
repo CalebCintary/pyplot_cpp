@@ -69,5 +69,21 @@ const std::map<std::string, pyplot_cpp::plt::Property> &pyplot_cpp::BasePlot::ge
     return args;
 }
 
+void pyplot_cpp::BasePlot::dynamicScript_PostConfiguration() {
+    if (!xlabel.empty()) {
+        script.addLine(plt::xlabel(xlabel));
+    }
+    if (!ylabel.empty()) {
+        script.addLine(plt::ylabel(ylabel));
+    }
+    if (!title.empty()) {
+        script.addLine(plt::title(title));
+    }
+}
+
+void pyplot_cpp::BasePlot::dynamicScript_Import() {
+
+}
+
 
 

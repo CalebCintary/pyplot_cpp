@@ -23,7 +23,7 @@ namespace pyplot_cpp {
         void appendData(std::vector<double> _x, std::vector<double> _y) override;
 
     protected:
-        void dynamicScript_show_stringConstruct() override;
+        void dynamicScript_Configuration() override;
 
         std::map<std::string, double> _map;
 

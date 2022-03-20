@@ -17,11 +17,15 @@ namespace pyplot_cpp {
 
         bool _tight_layout;
 
-        /**
-         * Displays your plot
-         */
-        virtual void dynamicScript_show_stringConstruct() = 0;
-//        virtual void realTime_show() = 0;
+        // ----- < Scripting functions > -----
+
+        virtual void dynamicScript_Import() = 0;
+
+        virtual void dynamicScript_Configuration() = 0;
+
+        virtual void dynamicScript_PostConfiguration() = 0;
+
+        virtual void dynamicScript_CallOrder();
 
     public:
 

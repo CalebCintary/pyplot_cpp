@@ -15,7 +15,7 @@ void pyplot_cpp::Showable::tight_layout(bool _v) {
 
 void pyplot_cpp::Showable::show(bool async) {
 #ifdef PYPLOT_CPP_DYNAMIC_SCRIPT_RUNNER
-    dynamicScript_show_stringConstruct();
+    dynamicScript_CallOrder();
 
     if (_tight_layout) {
         script.addLine(plt::tight_layout());
@@ -29,7 +29,7 @@ void pyplot_cpp::Showable::show(bool async) {
 
 void pyplot_cpp::Showable::save(const std::string &path) {
 #ifdef PYPLOT_CPP_DYNAMIC_SCRIPT_RUNNER
-    dynamicScript_show_stringConstruct();
+    dynamicScript_CallOrder();
 
     if (_tight_layout) {
         script.addLine(plt::tight_layout());
@@ -39,4 +39,10 @@ void pyplot_cpp::Showable::save(const std::string &path) {
     python::DynamicScriptRunner runner(&script);
     runner.Run();
 #endif
+}
+
+void pyplot_cpp::Showable::dynamicScript_CallOrder() {
+    dynamicScript_Import();
+    dynamicScript_Configuration();
+    dynamicScript_PostConfiguration();
 }

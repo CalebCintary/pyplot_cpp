@@ -14,7 +14,7 @@ namespace pyplot_cpp {
     private:
         std::vector<Plot> plots;
         std::vector<std::string> legends;
-        int legends_count;
+        int legends_count = 0;
 
     public:
 
@@ -23,7 +23,7 @@ namespace pyplot_cpp {
         void addPlot(Plot plot, std::string legend);
 
     protected:
-        void dynamicScript_show_stringConstruct() override;
+        void dynamicScript_Configuration() override;
     };
 }
 

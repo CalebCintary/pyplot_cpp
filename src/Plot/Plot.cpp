@@ -13,21 +13,11 @@
 namespace conv = pyplot_cpp::converter;
 namespace plt = pyplot_cpp::plt;
 
-void pyplot_cpp::Plot::dynamicScript_show_stringConstruct() {
+void pyplot_cpp::Plot::dynamicScript_Configuration() {
     script.addAssignment("x", conv::vectorToPythonArray(x));
     script.addAssignment("y", conv::vectorToPythonArray(y));
 
     script.addLine(plt::plot("x", "y", args));
-
-    if (!xlabel.empty()) {
-        script.addLine(plt::xlabel(xlabel));
-    }
-    if (!ylabel.empty()) {
-        script.addLine(plt::ylabel(ylabel));
-    }
-    if (!title.empty()) {
-        script.addLine(plt::title(title));
-    }
 }
 
 pyplot_cpp::Plot::Plot() : BasePlot() {

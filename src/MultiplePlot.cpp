@@ -12,7 +12,7 @@ void pyplot_cpp::MultiplePlot::addPlot(pyplot_cpp::Plot plot) {
     addPlot(plot, "");
 }
 
-void pyplot_cpp::MultiplePlot::dynamicScript_show_stringConstruct() {
+void pyplot_cpp::MultiplePlot::dynamicScript_Configuration() {
     for (const auto & item : plots) {
         script.addAssignment("x", conv::vectorToPythonArray(item.getX()));
         script.addAssignment("y", conv::vectorToPythonArray(item.getY()));

@@ -22,7 +22,7 @@ namespace pyplot_cpp {
 
         Plot(Plot const & plot);
 
-        void dynamicScript_show_stringConstruct() override;
+        void dynamicScript_Configuration() override;
     };
 }
 

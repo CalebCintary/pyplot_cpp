@@ -10,7 +10,7 @@
 
 namespace plt = pyplot_cpp::plt;
 
-void pyplot_cpp::Bar::dynamicScript_show_stringConstruct() {
+void pyplot_cpp::Bar::dynamicScript_Configuration() {
     if (!_map.empty()) {
         std::stringstream _data;
         _data << "{";
