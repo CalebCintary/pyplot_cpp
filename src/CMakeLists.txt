@@ -26,6 +26,8 @@ add_library(pyplot_cpp STATIC
         plt/Color.cpp
         ../include/pyplot_cpp/plt/properties/Color.h
         MultiplePlot.cpp
-        ../include/pyplot_cpp/MultiplePlot.hpp Histogram.cpp ../include/pyplot_cpp/Histogram.hpp MultipleHistogram.cpp ../include/pyplot_cpp/MultipleHistogram.hpp converter.cpp Scatter.cpp ../include/pyplot_cpp/Scatter.hpp)
+        ../include/pyplot_cpp/MultiplePlot.hpp Histogram.cpp ../include/pyplot_cpp/Histogram.hpp MultipleHistogram.cpp ../include/pyplot_cpp/MultipleHistogram.hpp converter.cpp Scatter.cpp ../include/pyplot_cpp/Scatter.hpp
+        Axisable.cpp
+        ../include/pyplot_cpp/Axisable.hpp)
 
 target_include_directories(pyplot_cpp PRIVATE ../include)

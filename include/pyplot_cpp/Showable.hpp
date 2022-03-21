@@ -15,6 +15,8 @@ namespace pyplot_cpp {
 
         python::PythonScript script;
 
+        std::string title = "";
+
         bool _tight_layout;
 
         // ----- < Scripting functions > -----
@@ -28,6 +30,12 @@ namespace pyplot_cpp {
         virtual void dynamicScript_CallOrder();
 
     public:
+
+        /**
+         * Sets title to your plot
+         * @param _title
+         */
+        void setTitle(const std::string& _title);
 
         /**
          * Displays your plot

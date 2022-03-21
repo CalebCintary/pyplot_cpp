@@ -67,3 +67,22 @@ int main() {
 This will show you your bar plot:
 
 <img src="./examples/Bar_SimpleShow.png" width="500">
+
+### Histogram
+
+If you want to display histogram you need to use Histogram class.
+```c++
+#include "pyplot_cpp/Histogram.hpp"
+
+int main() {
+    pyplot_cpp::Histogram hist;
+    hist.setData({1, 2, 3, 4, 5, 6, 7, 4});
+    hist.setBins({1, 2, 3, 4, 5, 6, 7});
+    hist.setTitle("Simple Histogram");
+    hist.show();
+}
+```
+
+<img src="./examples/Hist.png" width="500">
+
+To draw multiple histograms you need to use [Multiple Histogram](./examples/AdvancedPlot.md#multiple-histogram)

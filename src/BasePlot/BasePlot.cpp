@@ -37,18 +37,6 @@ void pyplot_cpp::BasePlot::appendData(std::vector<double> _x, std::vector<double
     }
 }
 
-void pyplot_cpp::BasePlot::setTitle(const std::string& _title) {
-    title = _title;
-}
-
-void pyplot_cpp::BasePlot::setXlabel(const std::string &_xlabel) {
-    xlabel = _xlabel;
-}
-
-void pyplot_cpp::BasePlot::setYlabel(const std::string &_ylabel) {
-    ylabel = _ylabel;
-}
-
 void pyplot_cpp::BasePlot::setColor(pyplot_cpp::plt::Color color) {
     addArgument(color);
 }

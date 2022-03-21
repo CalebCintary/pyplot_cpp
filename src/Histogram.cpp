@@ -9,6 +9,7 @@
 #include "pyplot_cpp/converter/converter.hpp"
 #include "pyplot_cpp/plt/pyplot.hpp"
 
+
 void pyplot_cpp::Histogram::addPoint(std::pair<double, double> _p) {
     BasePlot::addPoint(_p);
 }

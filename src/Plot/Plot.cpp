@@ -2,13 +2,13 @@
 // Created by calebcintary on 3/15/22.
 //
 
-#include "pyplot_cpp/python/PythonRunner.hpp"
 #include "pyplot_cpp/Plot.hpp"
 
 #include <utility>
 
 #include "pyplot_cpp/converter/converter.hpp"
 #include "pyplot_cpp/plt/pyplot.hpp"
+
 
 namespace conv = pyplot_cpp::converter;
 namespace plt = pyplot_cpp::plt;

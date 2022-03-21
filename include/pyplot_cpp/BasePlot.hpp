@@ -6,17 +6,16 @@
 #include "Showable.hpp"
 #include "python/PythonScript.hpp"
 #include "plt/Properties.hpp"
+#include "Axisable.hpp"
 
 namespace pyplot_cpp {
-class BasePlot : public Showable {
+class BasePlot : public Showable, public Axisable {
 protected:
 
     std::vector<double> x;
     std::vector<double> y;
 
-    std::string xlabel = "";
-    std::string ylabel = "";
-    std::string title = "";
+
 
     std::map<std::string, plt::Property> args;
 
@@ -42,15 +41,7 @@ public:
      */
     virtual void setData(std::vector<double> _x, std::vector<double> _y);
 
-    /**
-     * Sets title to your plot
-     * @param _title
-     */
-    void setTitle(const std::string& _title);
 
-    void setXlabel(const std::string &xlabel);
-
-    void setYlabel(const std::string &ylabel);
 
     void addArgument(const plt::Property& argument);
 

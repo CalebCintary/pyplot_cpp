@@ -46,3 +46,7 @@ void pyplot_cpp::Showable::dynamicScript_CallOrder() {
     dynamicScript_Configuration();
     dynamicScript_PostConfiguration();
 }
+
+void pyplot_cpp::Showable::setTitle(const std::string &_title) {
+    this->title = _title;
+}
