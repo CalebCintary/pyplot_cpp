@@ -28,6 +28,6 @@ add_library(pyplot_cpp STATIC
         MultiplePlot.cpp
         ../include/pyplot_cpp/MultiplePlot.hpp Histogram.cpp ../include/pyplot_cpp/Histogram.hpp MultipleHistogram.cpp ../include/pyplot_cpp/MultipleHistogram.hpp converter.cpp Scatter.cpp ../include/pyplot_cpp/Scatter.hpp
         Axisable.cpp
-        ../include/pyplot_cpp/Axisable.hpp)
+        ../include/pyplot_cpp/Axisable.hpp Graph.cpp ../include/pyplot_cpp/Graph.hpp ../include/pyplot_cpp/networkx.h networkx.cpp)
 
 target_include_directories(pyplot_cpp PRIVATE ../include)

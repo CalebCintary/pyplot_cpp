@@ -24,7 +24,7 @@ BOOST_AUTO_TEST_SUITE(Bar_Test)
         bar.appendData("C++", 15);
         bar.appendData("Java", 30);
         bar.appendData("Python", 35);
-        bar.addArgument(pyplot_cpp::plt::Color("maroon"));
+        bar.addProperty(pyplot_cpp::plt::Color("maroon"));
         bar.show();
     }
 

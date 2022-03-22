@@ -16,7 +16,6 @@ protected:
     std::vector<double> y;
 
 
-
     std::map<std::string, plt::Property> args;
 
 public:
@@ -43,7 +42,7 @@ public:
 
 
 
-    void addArgument(const plt::Property& argument);
+    void addProperty(const plt::Property& argument);
 
     void setColor(plt::Color color);
 

@@ -30,7 +30,7 @@ BOOST_AUTO_TEST_SUITE(Plot_Test)
         plot.addPoint(1, 1);
         plot.addPoint(2, 4);
         plot.addPoint(3, 2);
-        plot.addArgument(pyplot_cpp::plt::Property ("color", "maroon"));
+        plot.addProperty(pyplot_cpp::plt::Property("color", "maroon"));
         plot.show();
     }
 

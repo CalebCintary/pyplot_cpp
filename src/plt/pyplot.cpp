@@ -15,7 +15,7 @@ std::string pyplot_cpp::plt::xlabel(const std::string &xlabel) {
 std::string pyplot_cpp::plt::plot(const std::string &x,
                                   const std::string &y,
                                   const std::map<std::string, Property>& args) {
-    return "plt.plot(" + x + ", " + y + (!args.empty() ? ", " + parseArguments(args) : "") + ")";
+    return "plt.plot(" + x + ", " + y + parseArguments(args) + ")";
 }
 
 std::string pyplot_cpp::plt::ylabel(const std::string &ylabel) {
@@ -42,7 +42,7 @@ std::string pyplot_cpp::plt::tight_layout() {
 std::string pyplot_cpp::plt::bar(const std::string &x,
                                  const std::string &y,
                                  const std::map<std::string, Property>& args) {
-    return "plt.bar(" + x + ", " + y + (!args.empty() ? ", " + parseArguments(args) : "") + ")";
+    return "plt.bar(" + x + ", " + y + parseArguments(args) + ")";
 }
 
 std::string pyplot_cpp::plt::show() {
@@ -58,10 +58,10 @@ std::string pyplot_cpp::plt::legend(std::string legend_array) {
 }
 
 std::string pyplot_cpp::plt::hist(const std::string &x, const std::map<std::string, Property> &args) {
-    return "plt.hist(" + x + (!args.empty() ? ", " + parseArguments(args) : "") + ")";
+    return "plt.hist(" + x + parseArguments(args) + ")";
 }
 
 std::string  pyplot_cpp::plt::scatter(const std::string &x, const std::string &y,
                                       const std::map<std::string, Property> &args) {
-    return "plt.scatter(" + x + ", " + y + (!args.empty() ? ", " + parseArguments(args) : "") + ")";
+    return "plt.scatter(" + x + ", " + y + parseArguments(args) + ")";
 }

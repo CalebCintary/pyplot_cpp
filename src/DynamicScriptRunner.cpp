@@ -4,6 +4,8 @@
 
 #include "pyplot_cpp/python/DynamicScriptRunner.hpp"
 
+#include <pthread.h>
+
 void pyplot_cpp::python::DynamicScriptRunner::Run(bool async) {
     std::ofstream out;
     std::string fileName =

@@ -13,8 +13,9 @@ namespace pyplot_cpp {
     namespace plt {
 
         enum ArgumentType {
-            STRING ,
+            STRING,
             INT,
+            BOOL
         };
 
         class Property {

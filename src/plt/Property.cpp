@@ -5,6 +5,7 @@
 #include "pyplot_cpp/plt/Property.hpp"
 
 #include <utility>
+#include <stdexcept>
 
 const std::string &pyplot_cpp::plt::Property::getName() const {
     return name;
@@ -42,17 +43,29 @@ std::string pyplot_cpp::plt::Property::getStringPresentation() const {
             arg += value;
             break;
         }
+        case ArgumentType::BOOL: {
+            arg += value;
+            break;
+        }
         case ArgumentType::STRING: {
             arg += "'" + value + "'";
+        }
+        default: {
+            throw std::runtime_error("Something really strange just happend but you got unknown PropertyType: " + std::to_string(type));
         }
     }
     return arg;
 }
 
 std::string pyplot_cpp::plt::parseArguments(std::map<std::string, pyplot_cpp::plt::Property> args) {
-    std::string ss;
-    for (const auto &item : args) {
-        ss += item.second.getStringPresentation() + ",";
+    if (args.empty()) {
+        return "";
+    } else {
+        std::string ss;
+        for (const auto &item : args) {
+            ss += "," + item.second.getStringPresentation();
+        }
+        return ss;
     }
-    return ss;
+
 }

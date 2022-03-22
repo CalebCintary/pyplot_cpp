@@ -38,10 +38,10 @@ void pyplot_cpp::BasePlot::appendData(std::vector<double> _x, std::vector<double
 }
 
 void pyplot_cpp::BasePlot::setColor(pyplot_cpp::plt::Color color) {
-    addArgument(color);
+    addProperty(color);
 }
 
-void pyplot_cpp::BasePlot::addArgument(const pyplot_cpp::plt::Property &argument) {
+void pyplot_cpp::BasePlot::addProperty(const pyplot_cpp::plt::Property &argument) {
     args[argument.getName()] = argument;
 }
 
