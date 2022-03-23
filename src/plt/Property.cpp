@@ -49,6 +49,7 @@ std::string pyplot_cpp::plt::Property::getStringPresentation() const {
         }
         case ArgumentType::STRING: {
             arg += "'" + value + "'";
+            break;
         }
         default: {
             throw std::runtime_error("Something really strange just happend but you got unknown PropertyType: " + std::to_string(type));

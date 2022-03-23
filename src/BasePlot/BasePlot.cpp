@@ -41,10 +41,6 @@ void pyplot_cpp::BasePlot::setColor(pyplot_cpp::plt::Color color) {
     addProperty(color);
 }
 
-void pyplot_cpp::BasePlot::addProperty(const pyplot_cpp::plt::Property &argument) {
-    args[argument.getName()] = argument;
-}
-
 const std::vector<double> &pyplot_cpp::BasePlot::getX() const {
     return x;
 }

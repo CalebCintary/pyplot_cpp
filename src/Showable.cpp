@@ -27,6 +27,10 @@ void pyplot_cpp::Showable::show(bool async) {
 #endif
 }
 
+//void pyplot_cpp::Showable::addProperty(const plt::Property &argument) {
+
+//}
+
 void pyplot_cpp::Showable::save(const std::string &path) {
 #ifdef PYPLOT_CPP_DYNAMIC_SCRIPT_RUNNER
     dynamicScript_CallOrder();
@@ -49,4 +53,14 @@ void pyplot_cpp::Showable::dynamicScript_CallOrder() {
 
 void pyplot_cpp::Showable::setTitle(const std::string &_title) {
     this->title = _title;
+}
+
+void pyplot_cpp::Showable::addProperty(const pyplot_cpp::plt::Property &argument) {
+    auto _it = args.find(argument.getName());
+    if (_it != args.end()) {
+        args.erase(_it);
+
+    }
+    auto string = argument.getName();
+    args.insert(std::pair<std::string, plt::Property> (string, argument));
 }

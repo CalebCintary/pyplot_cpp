@@ -38,6 +38,7 @@ namespace pyplot_cpp {
     class BaseGraph : public Showable {
     protected:
         std::vector<Edge> edges;
+        std::vector<WeightedEdge> wedges;
         bool weight;
 
         std::map<std::string, plt::Property> args;

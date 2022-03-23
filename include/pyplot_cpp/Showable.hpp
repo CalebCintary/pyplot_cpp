@@ -6,8 +6,10 @@
 #define PYPLOT_CPP_SHOWABLE_HPP
 
 #include <sstream>
+#include <map>
 
 #include "python/PythonScript.hpp"
+#include "plt/Properties.hpp"
 
 namespace pyplot_cpp {
     class Showable {
@@ -16,6 +18,8 @@ namespace pyplot_cpp {
         python::PythonScript script;
 
         std::string title = "";
+
+        std::map<std::string, plt::Property> args;
 
         bool _tight_layout;
 
@@ -47,6 +51,7 @@ namespace pyplot_cpp {
 
         void tight_layout(bool _v = true);
 
+        void addProperty(const plt::Property& argument);
     };
 }
 

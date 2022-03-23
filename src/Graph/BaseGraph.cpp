@@ -9,11 +9,11 @@ void pyplot_cpp::BaseGraph::dynamicScript_Import() {
 }
 
 void pyplot_cpp::BaseGraph::addEdge(const std::string& _from, const std::string& _to, const std::string& _weight) {
-    edges.push_back(WeightedEdge(_from, _to, _weight));
+    wedges.emplace_back(_from, _to, _weight);
 }
 
 void pyplot_cpp::BaseGraph::addEdge(const std::string& _from, const std::string& _to) {
-    edges.push_back(Edge(_from, _to));
+    edges.emplace_back(_from, _to);
 }
 
 void pyplot_cpp::BaseGraph::addEdge(pyplot_cpp::Edge edge) {

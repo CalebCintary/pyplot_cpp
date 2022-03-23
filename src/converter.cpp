@@ -19,18 +19,35 @@ std::string pyplot_cpp::converter::vectorToPythonArray(std::vector<std::string> 
 
 std::string pyplot_cpp::converter::vectorToPythonArray(const std::vector <Edge>& _v) {
     std::string res = "[";
+    if (!_v.empty()) {
+        for (int i = 0; i < _v.size(); ++i) {
+            if (i != 0) {
+                res += ", ";
+            }
+            res += "(";
+            res += _v[i].getFrom() + ",";
+            res += _v[i].getTo();
+            res += ")";
+        }
+    }
+    res += "]";
+    return res;
+}
 
-
-
-//    if (!_v.empty()) {
-//        for (int i = 0; i < _v.size() - 1; ++i) {
-//            res += ("(" + _v[i].getFrom() + "," +
-//                    _v[i].getTo() + (_v[i].getWeight().empty() ? "" : "," + _v[i].getWeight()) + ")") + ", ";
-//        }
-//        res += ("(" + _v[_v.size() - 1].getFrom() + "," +
-//                _v[_v.size() - 1].getTo() + (_v[_v.size() - 1].getWeight().empty() ? "" : "," + _v[_v.size() - 1].getWeight()) + ")");
-//
-//    }
+std::string pyplot_cpp::converter::vectorToPythonArray(const std::vector<WeightedEdge> &_v) {
+    std::string res = "[";
+    if (!_v.empty()) {
+        for (int i = 0; i < _v.size(); ++i) {
+            if (i != 0) {
+                res += ", ";
+            }
+            res += "(";
+            res += _v[i].getFrom() + ",";
+            res += _v[i].getTo() + ",";
+            res += _v[i].getWeight();
+            res += ")";
+        }
+    }
     res += "]";
     return res;
 }

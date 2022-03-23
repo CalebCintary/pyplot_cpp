@@ -28,6 +28,8 @@ namespace pyplot_cpp {
         std::string vectorToPythonArray(std::vector<std::string> _v);
 
         std::string vectorToPythonArray(const std::vector<Edge>& _v);
+
+        std::string vectorToPythonArray(const std::vector<WeightedEdge>& _v);
     }
 }
 
