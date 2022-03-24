@@ -1,12 +1,8 @@
 # PyPlot_cpp
 
----
-
 ### This is work in progress. May be unstable or not work
 
 Simple library for displaying plots and graphs in c++
-
----
 
 ## Content table
 - [PyPlot_cpp](#pyplot_cpp)
@@ -14,7 +10,7 @@ Simple library for displaying plots and graphs in c++
   - [Building](#building)
   - [Usage](#usage)
 
----
+
 ## Requirements
 
 Firstly, with python script generation, you need to have python and matplotlib installed on your machine.
@@ -86,3 +82,23 @@ int main() {
 <img src="./examples/Hist.png" width="500">
 
 To draw multiple histograms you need to use [Multiple Histogram](./examples/AdvancedPlot.md#multiple-histogram)
+
+## Graphs
+
+### Not-directional graph
+
+Graphs working by networkx library, that working on matplotlib. This library also support to draw graphs.
+```c++
+#include "pyplot_cpp/Graph.hpp"
+
+int main() {
+    pyplot_cpp::Graph graph;
+    graph.addEdge("1", "2");
+
+    graph.setTitle("Simple Graph");
+    graph.show();
+}
+```
+<img src="examples/Graph_Simple.png" width="500">
+
+Also you can draw directional graphs and etc. For more information check [this](examples/AdvancedGraph.md).

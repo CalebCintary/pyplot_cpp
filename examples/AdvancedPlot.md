@@ -1,7 +1,5 @@
 # Advanced usage of Plots
 
----
-
 ## Multiple Plot
 
 MultiplePlot is a graph that can contain more than one graph. It can be displayed using the following code:
