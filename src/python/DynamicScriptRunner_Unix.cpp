@@ -28,6 +28,3 @@ void pyplot_cpp::python::DynamicScriptRunner::Run(bool async) {
     remove(fileName.c_str());
 }
 
-pyplot_cpp::python::DynamicScriptRunner::DynamicScriptRunner(PythonScript *script) : PythonRunner(script){
-
-}
