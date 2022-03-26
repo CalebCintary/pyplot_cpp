@@ -42,3 +42,18 @@ add_library(pyplot_cpp STATIC
         ${INCLUDE_SOURCE})
 
 target_include_directories(pyplot_cpp PRIVATE ../include)
+
+install(TARGETS pyplot_cpp
+        DESTINATION lib/pyplot_cpp)
+
+install(TARGETS pyplot_cpp EXPORT pyplot_cppConfig)
+install(EXPORT pyplot_cppConfig NAMESPACE PyPlot:: DESTINATION share/pyplot_cpp/cmake)
+
+include(CMakePackageConfigHelpers)
+write_basic_package_version_file("${PROJECT_BINARY_DIR}/pyplot_cppConfigVersion.cmake"
+        VERSION
+            ${PROJECT_VERSION}
+        COMPATIBILITY
+            AnyNewerVersion
+        )
+install(FILES "${PROJECT_BINARY_DIR}/pyplot_cppConfigVersion.cmake" DESTINATION share/pyplot_cpp/cmake)

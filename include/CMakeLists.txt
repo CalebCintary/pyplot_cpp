@@ -26,3 +26,5 @@ set(INCLUDE_SOURCE
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/converter/converter.hpp)
 
 set(INCLUDE_SOURCE ${INCLUDE_SOURCE} PARENT_SCOPE)
+
+install(DIRECTORY pyplot_cpp DESTINATION include)
