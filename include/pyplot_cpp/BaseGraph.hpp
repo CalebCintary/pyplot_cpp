@@ -28,7 +28,7 @@ namespace pyplot_cpp {
 
         const std::string &getValue() const;
 
-        float getWidth() const;
+        float getNodeSize() const;
 
         float getAlpha() const;
 
@@ -41,6 +41,10 @@ namespace pyplot_cpp {
         void setAlpha(float alpha);
 
         void setColor(const std::string &color);
+
+        bool operator==(const Node &rhs) const;
+
+        bool operator!=(const Node &rhs) const;
     };
 
     class Edge {
@@ -103,15 +107,19 @@ namespace pyplot_cpp {
 
         BaseGraph();
 
-        Edge& addEdge(const Node& from, const Node& to);
+        void addNode(const Node& _n);
 
-        Edge& addEdge(const Node& from, const Node& to, const std::string& weight);
+        void addEdge(const Node& from, const Node& to);
 
-        Edge& addEdge(const std::string& _from, const std::string& to, const std::string& weight);
+        void addEdge(const Node& from, const Node& to, const std::string& weight);
 
-        Edge& addEdge(const std::string& _from, const std::string& to);
+        void addEdge(const std::string& _from, const std::string& _to, const std::string& weight);
 
-        Edge& addEdge(const Edge& edge);
+        void addEdge(const std::string& _from, const std::string& _to);
+
+        void addEdge(const Edge& edge);
+
+        void addEdge(const WeightedEdge& wedge);
 
         void displayVertexLabels(bool _vertexLabels = true);
     };

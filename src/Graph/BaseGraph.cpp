@@ -1,6 +1,8 @@
 
 #include "pyplot_cpp/BaseGraph.hpp"
 
+#include <algorithm>
+
 #include "pyplot_cpp/plt/pyplot.hpp"
 
 void pyplot_cpp::BaseGraph::dynamicScript_Import() {
@@ -29,26 +31,50 @@ void pyplot_cpp::BaseGraph::displayVertexLabels(bool _vertexLabels) {
     }
 }
 
-pyplot_cpp::Edge &pyplot_cpp::BaseGraph::addEdge(const pyplot_cpp::Node &from, const pyplot_cpp::Node &to) {
-    // Fixme
+void pyplot_cpp::BaseGraph::addEdge(const pyplot_cpp::Node &from, const pyplot_cpp::Node &to) {
+    addNode(from);
+    addNode(to);
+    Edge edge(from, to);
+    edgeList.push_back(edge);
 }
 
-pyplot_cpp::Edge &
+void
 pyplot_cpp::BaseGraph::addEdge(const pyplot_cpp::Node &from, const pyplot_cpp::Node &to, const std::string &weight) {
-    // Fixme
+    addNode(from);
+    addNode(to);
+    WeightedEdge edge(from, to, weight);
+    wedgeList.push_back(edge);
 }
 
-pyplot_cpp::Edge &
-pyplot_cpp::BaseGraph::addEdge(const std::string &_from, const std::string &to, const std::string &weight) {
-    // Fixme
+void
+pyplot_cpp::BaseGraph::addEdge(const std::string &_from, const std::string &_to, const std::string &weight) {
+    Node from(_from);
+    Node to(_to);
+    addEdge(from, to, weight);
 }
 
-pyplot_cpp::Edge &pyplot_cpp::BaseGraph::addEdge(const std::string &_from, const std::string &to) {
-    // Fixme
+void pyplot_cpp::BaseGraph::addEdge(const std::string &_from, const std::string &_to) {
+    Node from(_from);
+    Node to(_to);
+    addEdge(from, to);
 }
 
-pyplot_cpp::Edge &pyplot_cpp::BaseGraph::addEdge(const pyplot_cpp::Edge &edge) {
-    // Fixme
+void pyplot_cpp::BaseGraph::addEdge(const pyplot_cpp::Edge &edge) {
+    addNode(edge.getFrom());
+    addNode(edge.getTo());
+    edgeList.push_back(edge);
+}
+
+void pyplot_cpp::BaseGraph::addNode(const pyplot_cpp::Node &_n) {
+    if (std::find(nodeList.begin(), nodeList.end(), _n) == nodeList.end()) {
+        nodeList.push_back(_n);
+    }
+}
+
+void pyplot_cpp::BaseGraph::addEdge(const pyplot_cpp::WeightedEdge &wedge) {
+    addNode(wedge.getFrom());
+    addNode(wedge.getTo());
+    wedgeList.push_back(wedge);
 }
 
 const std::string &pyplot_cpp::WeightedEdge::getWeight() const {
@@ -64,8 +90,8 @@ const std::string &pyplot_cpp::Node::getValue() const {
     return value;
 }
 
-float pyplot_cpp::Node::getWidth() const {
-    return width;
+float pyplot_cpp::Node::getNodeSize() const {
+    return node_size;
 }
 
 float pyplot_cpp::Node::getAlpha() const {
@@ -99,6 +125,14 @@ pyplot_cpp::Node::Node(const std::string &value, float nodeSize, float alpha, co
                                                                                                           color(color) {}
 
 pyplot_cpp::Node::Node(const std::string &value, const std::string &color) : value(value), color(color) {}
+
+bool pyplot_cpp::Node::operator==(const pyplot_cpp::Node &rhs) const {
+    return value == rhs.value;
+}
+
+bool pyplot_cpp::Node::operator!=(const pyplot_cpp::Node &rhs) const {
+    return !(rhs == *this);
+}
 
 pyplot_cpp::Edge::Edge(const pyplot_cpp::Node &from, const pyplot_cpp::Node &to) : from(from), to(to) {}
 

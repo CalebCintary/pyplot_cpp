@@ -25,8 +25,8 @@ std::string pyplot_cpp::converter::vectorToPythonArray(const std::vector <Edge>&
                 res += ", ";
             }
             res += "(";
-            res += _v[i].getFrom() + ",";
-            res += _v[i].getTo();
+            res += _v[i].getFrom().getValue() + ",";
+            res += _v[i].getTo().getValue();
             res += ")";
         }
     }
@@ -42,8 +42,8 @@ std::string pyplot_cpp::converter::vectorToPythonArray(const std::vector<Weighte
                 res += ", ";
             }
             res += "(";
-            res += _v[i].getFrom() + ",";
-            res += _v[i].getTo() + ",";
+            res += _v[i].getFrom().getValue() + ",";
+            res += _v[i].getTo().getValue() + ",";
             res += _v[i].getWeight();
             res += ")";
         }

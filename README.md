@@ -41,7 +41,7 @@ int main() {
 This will show you the simplest graph.
 
 <!--suppress HtmlRequiredAltAttribute, HtmlRequiredAltAttribute, CheckImageSize -->eckImageSize -->
-<img src="./examples/Plot_SimpleShow.png" width="500">
+<img src="./examples/Plot_SimpleShow.png" node_size="500">
 
 If you want to learn [Advanced usage of Plots](examples/AdvancedPlot.md) click here.
 
@@ -62,7 +62,7 @@ int main() {
 ```
 This will show you your bar plot:
 
-<img src="./examples/Bar_SimpleShow.png" width="500">
+<img src="./examples/Bar_SimpleShow.png" node_size="500">
 
 ### Histogram
 
@@ -79,7 +79,7 @@ int main() {
 }
 ```
 
-<img src="./examples/Hist.png" width="500">
+<img src="./examples/Hist.png" node_size="500">
 
 To draw multiple histograms you need to use [Multiple Histogram](./examples/AdvancedPlot.md#multiple-histogram)
 
@@ -99,6 +99,6 @@ int main() {
     graph.show();
 }
 ```
-<img src="examples/Graph_Simple.png" width="500">
+<img src="examples/Graph_Simple.png" node_size="500">
 
 Also you can draw directional graphs and etc. For more information check [this](examples/AdvancedGraph.md).

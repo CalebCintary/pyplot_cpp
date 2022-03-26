@@ -14,7 +14,7 @@ int main() {
     graph.show();
 }
 ```
-<img src="DiGraph_Simple.png" width="500">
+<img src="DiGraph_Simple.png" node_size="500">
 
 ## Graph properties
 
