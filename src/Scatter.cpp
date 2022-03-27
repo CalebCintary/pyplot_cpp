@@ -13,3 +13,12 @@ void pyplot_cpp::Scatter::dynamicScript_Configuration() {
 
     script.addLine(plt::scatter("x", "y", args));
 }
+
+pyplot_cpp::Scatter::Scatter() = default;
+
+pyplot_cpp::Scatter::Scatter(const pyplot_cpp::Scatter &plot) {
+    this->x = plot.x;
+    this->y = plot.y;
+    this->xlabel = plot.xlabel;
+    this->ylabel = plot.ylabel;
+}

@@ -11,6 +11,12 @@ namespace pyplot_cpp {
     class Scatter : public BasePlot {
     protected:
         void dynamicScript_Configuration() override;
+
+    public:
+
+        Scatter();
+
+        Scatter(const Scatter& plot);
     };
 }
 

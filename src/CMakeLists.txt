@@ -24,6 +24,7 @@ SET(SOURCES
         ${CMAKE_CURRENT_LIST_DIR}/MultiplePlot3D.cpp
         ${CMAKE_CURRENT_LIST_DIR}/MultipleScatter3D.cpp
         ${CMAKE_CURRENT_LIST_DIR}/MultipleTrisurfPlot.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/MultipleScatter.cpp
 
 
         ${CMAKE_CURRENT_LIST_DIR}/python/DynamicScriptRunner.cpp
@@ -37,7 +38,7 @@ IF (MSVC)
     message("Windows source found")
 ELSEIF(UNIX)
     set(SYSTEM_SOURCE
-            ${CMAKE_CURRENT_LIST_DIR}/python/DynamicScriptRunner_Unix.cpp )
+            ${CMAKE_CURRENT_LIST_DIR}/python/DynamicScriptRunner_Unix.cpp)
     message("Unix source found")
 ELSE()
     message("System source not defined")
