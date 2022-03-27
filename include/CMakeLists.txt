@@ -2,7 +2,7 @@ set(INCLUDE_SOURCE
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/BaseGraph.hpp
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/BasePlot.hpp
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/Plot.hpp
-        ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/Plot3D.hpp
+        ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/BasePlot3D.hpp
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/Showable.hpp
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/Bar.hpp
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/MultiplePlot.hpp
@@ -13,6 +13,10 @@ set(INCLUDE_SOURCE
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/Graph.hpp
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/networkx.h
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/DiGraph.hpp
+        ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/Plot3D.h
+        ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/Scatter3D.hpp
+        ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/WireframePlot.hpp
+        ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/TrisurfPlot.hpp
 
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/python/PythonRunner.hpp
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/python/PythonScript.hpp

@@ -2,7 +2,7 @@ SET(SOURCES
         ${CMAKE_CURRENT_LIST_DIR}/Graph/BaseGraph.cpp
         ${CMAKE_CURRENT_LIST_DIR}/BasePlot/BasePlot.cpp
         ${CMAKE_CURRENT_LIST_DIR}/Plot/Plot.cpp
-        ${CMAKE_CURRENT_LIST_DIR}/Plot3D/Plot3D.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/Plot3D/BasePlot3D.cpp
         ${CMAKE_CURRENT_LIST_DIR}/plt/pyplot.cpp
         ${CMAKE_CURRENT_LIST_DIR}/Showable.cpp
         ${CMAKE_CURRENT_LIST_DIR}/Bar.cpp
@@ -19,9 +19,13 @@ SET(SOURCES
         ${CMAKE_CURRENT_LIST_DIR}/DiGraph.cpp
         ${CMAKE_CURRENT_LIST_DIR}/python/PythonRunner.cpp
         ${CMAKE_CURRENT_LIST_DIR}/python/PythonScript.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/Plot3D.cpp
 
 
         ${CMAKE_CURRENT_LIST_DIR}/python/DynamicScriptRunner.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/Scatter3D.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/WireframePlot.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/TrisurfPlot.cpp
         )
 
 IF (MSVC)
