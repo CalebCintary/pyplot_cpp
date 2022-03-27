@@ -8,16 +8,21 @@
 #include "python/PythonScript.hpp"
 #include "plt/Properties.hpp"
 
+#define DEFAULT_NODE_SIZE 300
+#define DEFAULT_NODE_COLOR "#1f78b4"
+#define DEFAULT_EDGE_COLOR "k"
+#define DEFAULT_EDGE_WIDTH 1.0
+
 namespace pyplot_cpp {
 
     class Node {
     protected:
         std::string value;
 
-        float node_size = 0;
+        float node_size = DEFAULT_NODE_SIZE;
         float alpha = 1;
 
-        std::string color;
+        std::string color = DEFAULT_NODE_COLOR;
 
     public:
         explicit Node(const std::string &value);
@@ -52,10 +57,10 @@ namespace pyplot_cpp {
         Node from;
         Node to;
 
-        float width = 0;
+        float width = DEFAULT_EDGE_WIDTH;
         float alpha = 1;
 
-        std::string color;
+        std::string color = DEFAULT_EDGE_COLOR;
 
     public:
         Edge(const Node &from, const Node &to);
@@ -72,6 +77,8 @@ namespace pyplot_cpp {
         float getWidth() const;
 
         float getAlpha() const;
+
+        const std::string &getColor() const;
 
         void setWidth(float width);
 

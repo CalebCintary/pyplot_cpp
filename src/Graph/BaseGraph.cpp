@@ -171,3 +171,7 @@ pyplot_cpp::Edge::Edge(const pyplot_cpp::Node &from, const pyplot_cpp::Node &to,
                                                                                                              to(to),
                                                                                                              color(color) {}
 
+const std::string &pyplot_cpp::Edge::getColor() const {
+    return color;
+}
+

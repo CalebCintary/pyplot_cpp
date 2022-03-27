@@ -27,9 +27,34 @@ namespace pyplot_cpp {
 
         std::string vectorToPythonArray(std::vector<std::string> _v);
 
-        std::string vectorToPythonArray(const std::vector<Edge>& _v);
+        struct EdgeArray {
+            std::string EdgeArray;
+            std::string EdgeWidthArray;
+            std::string EdgeColorArray;
+            std::string EdgeAlphaArray;
+        };
 
-        std::string vectorToPythonArray(const std::vector<WeightedEdge>& _v);
+        struct WEdgeArray {
+            std::string EdgeArray;
+            std::string EdgeWidthArray;
+            std::string EdgeColorArray;
+            std::string EdgeAlphaArray;
+        };
+
+        EdgeArray vectorToPythonArray(const std::vector<Edge>& _v);
+
+        WEdgeArray vectorToPythonArray(const std::vector<WeightedEdge>& _v);
+
+        struct NodeArray {
+            std::string nodeArray;
+            std::string nodeSizeArray;
+            std::string nodeColorArray;
+            std::string nodeAlphaArray;
+        };
+
+        NodeArray vectorToPythonArray(const std::vector<Node>& _v);
+
+
     }
 }
 

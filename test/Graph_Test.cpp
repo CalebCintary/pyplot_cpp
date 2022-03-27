@@ -18,7 +18,10 @@ BOOST_AUTO_TEST_SUITE(Graph_Test)
 
     BOOST_AUTO_TEST_CASE(Graph_SimpleShow_Test) {
         pyplot_cpp::Graph graph;
-        graph.addEdge("1", "2");
+        graph.addEdge(
+                pyplot_cpp::Node("1", 600, 0.5, "red"),
+                pyplot_cpp::Node("2")
+                );
 
         graph.setTitle("Simple Graph");
         graph.show();
@@ -34,7 +37,13 @@ BOOST_AUTO_TEST_SUITE(Graph_Test)
 
     BOOST_AUTO_TEST_CASE(Graph_Weighted_SimpleShow_Test) {
         pyplot_cpp::Graph graph;
-        graph.addEdge("1", "2");
+        graph.addEdge(pyplot_cpp::Edge(
+                pyplot_cpp::Node("1", 600, 0.5, "red"),
+                pyplot_cpp::Node("2"),
+                2.0,
+                0.5,
+                "red"
+                ));
         graph.addEdge("1", "3", "3");
         graph.addEdge("2", "3", "5");
 
