@@ -38,6 +38,12 @@ namespace pyplot_cpp {
 
         void setZlabel(const std::string &zlabel);
 
+        const std::vector<double> &getX() const;
+
+        const std::vector<double> &getY() const;
+
+        const std::vector<double> &getZ() const;
+
 
     };
 }

@@ -7,6 +7,8 @@
 
 #ifdef PYPLOT_CPP_DYNAMIC_SCRIPT_RUNNER
 #include "pyplot_cpp/python/DynamicScriptRunner.hpp"
+#include "pyplot_cpp/plt/Property.hpp"
+
 #endif
 
 void pyplot_cpp::Showable::tight_layout(bool _v) {
@@ -63,4 +65,8 @@ void pyplot_cpp::Showable::addProperty(const pyplot_cpp::plt::Property &argument
     }
     auto string = argument.getName();
     args.insert(std::pair<std::string, plt::Property> (string, argument));
+}
+
+const std::map<std::string, pyplot_cpp::plt::Property> &pyplot_cpp::Showable::getArgs() const {
+    return args;
 }

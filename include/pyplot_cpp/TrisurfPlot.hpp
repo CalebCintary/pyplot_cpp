@@ -11,6 +11,12 @@ namespace pyplot_cpp {
     class TrisurfPlot : public BasePlot3D {
     protected:
         void dynamicScript_Configuration() override;
+
+    public:
+
+        TrisurfPlot() = default;
+
+        TrisurfPlot(const TrisurfPlot& plot);
     };
 }
 

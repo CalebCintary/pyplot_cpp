@@ -50,3 +50,15 @@ void pyplot_cpp::BasePlot3D::appendData(std::vector<double> _x, std::vector<doub
 void pyplot_cpp::BasePlot3D::setZlabel(const std::string &zlabel) {
     BasePlot3D::zlabel = zlabel;
 }
+
+const std::vector<double> &pyplot_cpp::BasePlot3D::getX() const {
+    return x;
+}
+
+const std::vector<double> &pyplot_cpp::BasePlot3D::getY() const {
+    return y;
+}
+
+const std::vector<double> &pyplot_cpp::BasePlot3D::getZ() const {
+    return z;
+}

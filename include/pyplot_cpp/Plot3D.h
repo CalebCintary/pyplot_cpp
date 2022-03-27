@@ -11,6 +11,11 @@ namespace pyplot_cpp {
     class Plot3D : public BasePlot3D {
     protected:
         void dynamicScript_Configuration() override;
+
+    public:
+        Plot3D();
+
+        Plot3D(const Plot3D& plot);
     };
 
 }

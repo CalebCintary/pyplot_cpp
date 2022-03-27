@@ -17,6 +17,9 @@ set(INCLUDE_SOURCE
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/Scatter3D.hpp
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/WireframePlot.hpp
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/TrisurfPlot.hpp
+        ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/MultiplePlot3D.hpp
+        ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/MultipleScatter3D.hpp
+        ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/MultipleTrisurfPlot.hpp
 
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/python/PythonRunner.hpp
         ${CMAKE_CURRENT_LIST_DIR}/pyplot_cpp/python/PythonScript.hpp

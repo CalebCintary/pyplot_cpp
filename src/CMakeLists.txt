@@ -17,15 +17,18 @@ SET(SOURCES
         ${CMAKE_CURRENT_LIST_DIR}/Graph.cpp
         ${CMAKE_CURRENT_LIST_DIR}/networkx.cpp
         ${CMAKE_CURRENT_LIST_DIR}/DiGraph.cpp
-        ${CMAKE_CURRENT_LIST_DIR}/python/PythonRunner.cpp
-        ${CMAKE_CURRENT_LIST_DIR}/python/PythonScript.cpp
         ${CMAKE_CURRENT_LIST_DIR}/Plot3D.cpp
-
-
-        ${CMAKE_CURRENT_LIST_DIR}/python/DynamicScriptRunner.cpp
         ${CMAKE_CURRENT_LIST_DIR}/Scatter3D.cpp
         ${CMAKE_CURRENT_LIST_DIR}/WireframePlot.cpp
         ${CMAKE_CURRENT_LIST_DIR}/TrisurfPlot.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/MultiplePlot3D.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/MultipleScatter3D.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/MultipleTrisurfPlot.cpp
+
+
+        ${CMAKE_CURRENT_LIST_DIR}/python/DynamicScriptRunner.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/python/PythonRunner.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/python/PythonScript.cpp
         )
 
 IF (MSVC)
@@ -34,7 +37,7 @@ IF (MSVC)
     message("Windows source found")
 ELSEIF(UNIX)
     set(SYSTEM_SOURCE
-            ${CMAKE_CURRENT_LIST_DIR}/python/DynamicScriptRunner_Unix.cpp)
+            ${CMAKE_CURRENT_LIST_DIR}/python/DynamicScriptRunner_Unix.cpp )
     message("Unix source found")
 ELSE()
     message("System source not defined")

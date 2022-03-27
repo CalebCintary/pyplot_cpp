@@ -16,3 +16,12 @@ void pyplot_cpp::TrisurfPlot::dynamicScript_Configuration() {
 
     script.addLine("plt.show()");
 }
+
+pyplot_cpp::TrisurfPlot::TrisurfPlot(const pyplot_cpp::TrisurfPlot &plot) {
+    this->x = plot.x;
+    this->y = plot.y;
+    this->z = plot.z;
+    this->xlabel = plot.xlabel;
+    this->ylabel = plot.ylabel;
+    this->zlabel = plot.zlabel;
+}

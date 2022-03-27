@@ -52,6 +52,8 @@ namespace pyplot_cpp {
         void tight_layout(bool _v = true);
 
         void addProperty(const plt::Property& argument);
+
+        const std::map<std::string, plt::Property> &getArgs() const;
     };
 }
 

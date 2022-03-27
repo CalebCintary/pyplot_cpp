@@ -16,3 +16,12 @@ void pyplot_cpp::Scatter3D::dynamicScript_Configuration() {
 
     script.addLine("plt.show()");
 }
+
+pyplot_cpp::Scatter3D::Scatter3D(const pyplot_cpp::Scatter3D &plot) {
+    this->x = plot.x;
+    this->y = plot.y;
+    this->z = plot.z;
+    this->xlabel = plot.xlabel;
+    this->ylabel = plot.ylabel;
+    this->zlabel = plot.zlabel;
+}

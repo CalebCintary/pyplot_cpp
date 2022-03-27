@@ -11,6 +11,12 @@ namespace pyplot_cpp {
     class Scatter3D : public BasePlot3D {
     protected:
         void dynamicScript_Configuration() override;
+
+    public:
+
+        Scatter3D() = default;
+
+        Scatter3D(const Scatter3D& plot);
     };
 }
 
