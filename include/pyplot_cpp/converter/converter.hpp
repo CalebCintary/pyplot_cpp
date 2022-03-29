@@ -28,14 +28,14 @@ namespace pyplot_cpp {
         std::string vectorToPythonArray(std::vector<std::string> _v);
 
         struct EdgeArray {
-            std::string EdgeArray;
+            std::string _EdgeArray;
             std::string EdgeWidthArray;
             std::string EdgeColorArray;
             std::string EdgeAlphaArray;
         };
 
         struct WEdgeArray {
-            std::string EdgeArray;
+            std::string _EdgeArray;
             std::string EdgeWidthArray;
             std::string EdgeColorArray;
             std::string EdgeAlphaArray;

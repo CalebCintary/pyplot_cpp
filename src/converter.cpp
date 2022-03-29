@@ -45,7 +45,7 @@ pyplot_cpp::converter::EdgeArray pyplot_cpp::converter::vectorToPythonArray(cons
     EdgeWidthArray += "]";
     EdgeAlphaArray += "]";
     EdgeColorArray += "]";
-    res.EdgeArray = EdgeArray;
+    res._EdgeArray = EdgeArray;
     res.EdgeWidthArray = EdgeWidthArray;
     res.EdgeAlphaArray = EdgeAlphaArray;
     res.EdgeColorArray = EdgeColorArray;
@@ -82,7 +82,7 @@ pyplot_cpp::converter::WEdgeArray pyplot_cpp::converter::vectorToPythonArray(con
     EdgeWidthArray += "]";
     EdgeAlphaArray += "]";
     EdgeColorArray += "]";
-    res.EdgeArray = EdgeArray;
+    res._EdgeArray = EdgeArray;
     res.EdgeWidthArray = EdgeWidthArray;
     res.EdgeAlphaArray = EdgeAlphaArray;
     res.EdgeColorArray = EdgeColorArray;

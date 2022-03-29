@@ -2,6 +2,8 @@
 // Created by calebcintary on 3/27/22.
 //
 
+#define _USE_MATH_DEFINES
+
 #include <boost/test/unit_test.hpp>
 #include <cmath>
 

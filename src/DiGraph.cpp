@@ -26,17 +26,17 @@ void pyplot_cpp::DiGraph::dynamicScript_Configuration() {
         converter::EdgeArray edge_list = converter::vectorToPythonArray(edgeList);
         converter::WEdgeArray wedge_list = converter::vectorToPythonArray(wedgeList);
 
-        script.addLine("g.add_edges_from(" + edge_list.EdgeArray + ")");
-        script.addLine("g.add_weighted_edges_from(" + wedge_list.EdgeArray + ")");
+        script.addLine("g.add_edges_from(" + edge_list._EdgeArray + ")");
+        script.addLine("g.add_weighted_edges_from(" + wedge_list._EdgeArray + ")");
 
         script.addLine("nx.draw_networkx_edges(g, pos, "
-                       "edgelist=" + edge_list.EdgeArray + "," +
+                       "edgelist=" + edge_list._EdgeArray + "," +
                        "alpha=" + edge_list.EdgeAlphaArray + "," +
                        "edge_color=" + edge_list.EdgeColorArray + "," +
                        "width=" + edge_list.EdgeWidthArray + ")");
 
         script.addLine("nx.draw_networkx_edges(g, pos, "
-                       "edgelist=" + wedge_list.EdgeArray + "," +
+                       "edgelist=" + wedge_list._EdgeArray + "," +
                        "alpha=" + wedge_list.EdgeAlphaArray + "," +
                        "edge_color=" + wedge_list.EdgeColorArray + "," +
                        "width=" + wedge_list.EdgeWidthArray + ")");
