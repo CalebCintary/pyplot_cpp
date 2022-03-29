@@ -20,11 +20,17 @@ namespace pyplot_cpp {
     protected:
         std::vector<TrisurfPlot> shelf;
 
+        std::vector<std::string> legends;
+        int legends_count = 0;
+
         void dynamicScript_Configuration() override;
+
 
     public:
 
         void addPlot(TrisurfPlot plot);
+
+        void addPlot(TrisurfPlot plot, std::string legend);
     };
 }
 
