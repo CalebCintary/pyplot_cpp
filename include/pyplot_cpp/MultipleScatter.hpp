@@ -22,10 +22,15 @@ namespace pyplot_cpp {
     protected:
         std::vector<Scatter> shelf;
 
+        std::vector<std::string> legends;
+        int legends_count = 0;
+
         void dynamicScript_Configuration() override;
 
     public:
         void addPlot(Scatter plot);
+
+        void addPlot(Scatter plot, std::string legend);
 
     };
 }

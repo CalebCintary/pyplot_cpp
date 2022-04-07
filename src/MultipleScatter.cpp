@@ -25,6 +25,7 @@ void pyplot_cpp::MultipleScatter::appendData(std::vector<double> _x, std::vector
 
 void pyplot_cpp::MultipleScatter::addPlot(pyplot_cpp::Scatter plot) {
     shelf.push_back(plot);
+    legends.push_back("");
 }
 
 void pyplot_cpp::MultipleScatter::dynamicScript_Configuration() {
@@ -34,4 +35,24 @@ void pyplot_cpp::MultipleScatter::dynamicScript_Configuration() {
 
         script.addLine(plt::scatter("x", "y", item.getArgs()));
     }
+
+    if (legends_count > 0) {
+        std::stringstream legendStream;
+        legendStream << "[";
+        for (int i = 0; i < legends.size() - 1; ++i) {
+            legendStream << "\"" << legends[i] << "\",";
+        }
+        legendStream << "\"" << legends[legends.size() - 1] << "\"]";
+
+        script.addLine(plt::legend(legendStream.str()));
+    }
+}
+
+void pyplot_cpp::MultipleScatter::addPlot(pyplot_cpp::Scatter plot, std::string legend) {
+    shelf.push_back(plot);
+    if (!legend.empty()) {
+        ++legends_count;
+    }
+
+    legends.push_back(legend);
 }
